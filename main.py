@@ -13,8 +13,9 @@ df = request.json()
 content = ""
 for article in df["articles"]:
     if article["title"] and article["description"] is not None:
-        content = (content + article['title'] + '\n' + article["description"]
-                   + 2*"\n")
+        content = (content + article['title']
+                   + '\n' + article["description"]
+                   + "\n" + article["url"] + 2*"\n")
 
 content = content.encode("utf-8")
 
