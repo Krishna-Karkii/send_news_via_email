@@ -10,7 +10,7 @@ url = ("https://newsapi.org/v2/everything?q=earth"
 request = requests.get(url)
 df = request.json()
 
-content = ""
+content = "Subject: Today's news"
 for article in df["articles"][0:20]:
     if article["title"] and article["description"] is not None:
         content = (content + article['title']
