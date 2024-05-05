@@ -11,7 +11,7 @@ request = requests.get(url)
 df = request.json()
 
 content = ""
-for article in df["articles"]:
+for article in df["articles"][0:20]:
     if article["title"] and article["description"] is not None:
         content = (content + article['title']
                    + '\n' + article["description"]
