@@ -1,10 +1,12 @@
 import requests
 import send_email
+
 # Api key and url
 api_key = "7ba2aaf2a0864e04a249eab3ea6ef225"
 url = ("https://newsapi.org/v2/everything?q=earth"
        "&from=2024-04-04&sortBy=publishedAt"
-       "&apiKey=7ba2aaf2a0864e04a249eab3ea6ef225")
+       "&apiKey=7ba2aaf2a0864e04a249eab3ea6ef225"
+       "&language=en")
 
 # request api and store it in df as dictionary
 request = requests.get(url)
